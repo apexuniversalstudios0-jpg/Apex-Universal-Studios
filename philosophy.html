@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.className="js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Company Philosophy | Apex Universal Studios™</title>
+<meta name="description" content="Apex believes exceptional creative work and enduring businesses are built through intentional creation, strong ownership, disciplined execution, continuous development, and long-term thinking.">
+<meta property="og:title" content="Company Philosophy | Apex Universal Studios™">
+<meta property="og:image" content="about-hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Cpath d='M32 12 12 52h9l11-24 11 24h9z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#0a0c10;--ink2:#14181f;--line:rgba(255,255,255,.16);--mute:rgba(255,255,255,.76);--head:64px;--jump:52px;
+--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + var(--jump) + env(safe-area-inset-top,0px) + 8px)}
+body{background:var(--ink);color:#fff;font-family:var(--sans);line-height:1.65;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:.6rem 1rem;z-index:3000}.skip:focus{left:8px}
+header{position:fixed;inset:0 0 auto;z-index:2000;display:flex;justify-content:space-between;align-items:center;height:calc(var(--head) + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 1.25rem 0;background:rgba(10,12,16,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:1.1rem}
+#menuBtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);cursor:pointer;display:grid;place-content:center;gap:5px}
+#menuBtn span{display:block;width:20px;height:2px;background:#fff;transition:transform .3s,opacity .3s}
+#menuBtn[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#menuBtn[aria-expanded=true] span:nth-child(2){opacity:0}
+#menuBtn[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:1900;background:var(--ink);overflow-y:auto;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s;padding:calc(var(--head) + env(safe-area-inset-top,0px) + 1rem) 1.25rem calc(2rem + env(safe-area-inset-bottom,0px))}
+#menu.open{visibility:visible;opacity:1}
+#menu details{border-bottom:1px solid var(--line)}
+#menu summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:1.3rem 0;font-size:1.2rem;font-weight:600}
+#menu summary::-webkit-details-marker{display:none}
+#menu summary::after{content:"+";font-size:1.5rem;transition:transform .3s}
+#menu details[open] summary::after{transform:rotate(45deg)}
+#menu details a{display:block;padding:.95rem 0 .95rem 1rem;color:var(--mute);border-left:2px solid transparent}
+#menu details a:hover,#menu details a:focus-visible,#menu details a[aria-current]{color:#fff;border-left-color:#fff}
+.follow{padding-top:1.5rem;color:var(--mute)}.follow div{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:.6rem}
+.hero{position:relative;min-height:min(84svh,720px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink2)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,16,.96) 0%,rgba(10,12,16,.62) 45%,rgba(10,12,16,.12) 100%)}
+.hero div{position:relative;z-index:1;padding:6rem 1.25rem 2.5rem;max-width:900px}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.12}
+h1{font-size:clamp(2.6rem,10vw,5rem);margin-bottom:1rem}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:1rem}
+.lede{font-size:clamp(1.05rem,3.4vw,1.35rem);color:var(--mute);max-width:56ch}
+.jump{position:sticky;top:calc(var(--head) + env(safe-area-inset-top,0px));z-index:1500;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding:.7rem 1.25rem;height:var(--jump);background:rgba(10,12,16,.94);border-bottom:1px solid var(--line)}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;padding:.35rem .95rem;border:1px solid var(--line);border-radius:99px;color:var(--mute);font-size:.92rem;white-space:nowrap}
+.jump a:hover{color:#fff;border-color:#fff}
+section.s{padding:4rem 1.25rem;border-bottom:1px solid var(--line);max-width:1100px;margin:0 auto}
+.s p{color:var(--mute);font-size:1.05rem;max-width:64ch;margin-bottom:1.1rem}
+.s .em{font-family:var(--serif);font-style:italic;color:#fff;font-size:1.25rem}
+.chips,.grid{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0}
+.chips li{padding:.45rem 1rem;border:1px solid var(--line);border-radius:99px;color:var(--mute);font-size:.95rem}
+.row{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:1.4rem -1.25rem;padding:0 1.25rem}
+.row::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(78%,300px);scroll-snap-align:start;padding:1.4rem;border:1px solid var(--line);border-top:3px solid var(--c,#fff);border-radius:10px;background:var(--ink2)}
+.card b{display:block;font-family:var(--serif);font-weight:400;font-size:1.35rem;margin-bottom:.4rem}
+.card span{color:var(--mute);font-size:.98rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+a.card:hover{background:#1b212b}
+.close{padding:5rem 1.25rem;text-align:center}
+.close p{font-family:var(--serif);font-size:clamp(1.5rem,5vw,2.5rem);line-height:1.25;max-width:24ch;margin:0 auto 2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.btns a{padding:.8rem 1.3rem;border:1px solid rgba(255,255,255,.4);border-radius:6px;font-weight:600}.btns a:hover{background:rgba(255,255,255,.12)}
+footer{padding:2.5rem 1.25rem calc(2.5rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--mute);font-size:.92rem}
+footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-bottom:1.2rem}
+.js .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.js .w>span{display:inline-block;transform:translateY(112%);transition:transform 1s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+.js .in .w>span{transform:none}
+.js .hero img{transform:scale(1.08);filter:brightness(.25);transition:filter 2.2s ease,transform 3s cubic-bezier(.2,.7,.2,1)}
+.js .hero.in img{transform:none;filter:none}
+.js .rv>*:not(h2){opacity:0;transform:translateY(14px);transition:opacity .9s ease .3s,transform .9s ease .3s}
+.js .rv.in>*:not(h2){opacity:1;transform:none}
+@media(min-width:900px){.hero div,.jump{padding-left:4rem;padding-right:4rem}section.s{padding-left:2rem;padding-right:2rem}.row{margin:1.4rem 0;padding:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="index.html">Apex Universal Studios™</a>
+<button id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></header>
+
+<nav id="menu" aria-label="Main menu">
+<details name="g" open><summary>Company</summary>
+<a href="about.html">About Apex</a>
+<a href="mandate.html">Our Mandate</a>
+<a href="vision-mission.html">Vision &amp; Mission</a>
+<a href="philosophy.html" aria-current="page">Company Philosophy</a></details>
+<details name="g"><summary>Divisions</summary>
+<a href="coming-soon.html?p=Apex%20Animation%20Studio%E2%84%A2">Apex Animation Studio™</a>
+<a href="coming-soon.html?p=Apex%20Pictures%E2%84%A2">Apex Pictures™</a>
+<a href="coming-soon.html?p=Apex%20Music%E2%84%A2">Apex Music™</a>
+<a href="coming-soon.html?p=Apex%20Labels%E2%84%A2">Apex Labels™</a>
+<a href="coming-soon.html?p=Apex%20Games%E2%84%A2">Apex Games™</a>
+<a href="coming-soon.html?p=Apex%20Software%E2%84%A2">Apex Software™</a></details>
+<details name="g"><summary>Resources</summary>
+<a href="coming-soon.html?p=Portfolio">Portfolio</a>
+<a href="coming-soon.html?p=Documentation">Documentation</a>
+<a href="coming-soon.html?p=Company%20Blog">Company Blog</a>
+<a href="coming-soon.html?p=Press%20Kit">Press Kit</a></details>
+<details name="g"><summary>Support</summary>
+<a href="contact.html">Contact Us</a>
+<a href="coming-soon.html?p=Careers">Careers</a>
+<a href="coming-soon.html?p=Newsletter">Newsletter</a>
+<a href="privacy.html">Terms &amp; Privacy</a></details>
+<div class="follow">Follow Apex<div>
+<a href="https://x.com/ApexUniversalSt" target="_blank" rel="noopener">X</a>
+<a href="https://www.instagram.com/apexuniversalstudios" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@apexuniversalstudios" target="_blank" rel="noopener">Threads</a>
+<a href="https://www.tiktok.com/@apexuniversalstudios" target="_blank" rel="noopener">TikTok</a></div></div>
+</nav>
+
+<main id="main">
+<section class="hero" id="hero"><img src="about-hero.jpg" alt="The Apex Universal Studios building at dusk, with an illuminated company sign in the foreground"><div>
+<h1>Company Philosophy</h1>
+<p class="lede">Apex believes exceptional creative work and enduring businesses are built through intentional creation, strong ownership, disciplined execution, continuous development, and long-term thinking.</p></div></section>
+
+<nav class="jump" aria-label="On this page"><a href="#approach">Our approach</a><a href="#principles">Ten principles</a><a href="#how">How we work</a><a href="#decide">How we decide</a><a href="#divisions">Across divisions</a></nav>
+
+<section class="s rv" id="approach"><h2>Creativity and business, together</h2>
+<p>Apex treats creativity and business as connected disciplines. Creative ambition provides the work and intellectual property. Disciplined systems, technology, leadership, and business development provide the structure needed to sustain and expand them.</p>
+<p>Where the mission explains what Apex does and the vision describes what it is building toward, the philosophy is the underlying approach Apex uses while doing it.</p></section>
+
+<section class="s rv" id="principles"><h2>Ten principles</h2>
+<div class="grid"><div class="card" style="--c:#c75f2c"><b>Create With Purpose</b><span>Projects should have a clear creative reason to exist, rather than being produced simply to fill a schedule or follow a trend.</span></div><div class="card" style="--c:#2f6fae"><b>Build, Don't Just Produce</b><span>Production is part of the process. Building lasting capabilities, assets, businesses, and intellectual property is the larger objective.</span></div><div class="card" style="--c:#7a4fb0"><b>Creativity &amp; Business Work Together</b><span>Creative quality and business sustainability are not treated as opposing objectives.</span></div><div class="card" style="--c:#b08a2a"><b>Think Long Term</b><span>Decisions are considered beyond the immediate project, release, quarter, or business cycle.</span></div><div class="card" style="--c:#2f8f66"><b>Own What We Build</b><span>Clear ownership, stewardship, protection, and responsible development create the foundation for future opportunities.</span></div><div class="card" style="--c:#b43e5c"><b>Develop Continuously</b><span>No idea, capability, business, or creative system is treated as permanently finished.</span></div><div class="card" style="--c:#5b8fa8"><b>Specialization Strengthens the Ecosystem</b><span>Each division develops deep expertise within its own discipline while remaining aligned with the parent company.</span></div><div class="card" style="--c:#c75f2c"><b>Technology Serves Creation</b><span>Technology is treated as a capability rather than an end in itself.</span></div><div class="card" style="--c:#2f6fae"><b>Quality Requires Discipline</b><span>High-quality work requires development, iteration, standards, resources, technical competence, leadership, feedback, and execution.</span></div><div class="card" style="--c:#7a4fb0"><b>Adapt Without Losing the Core</b><span>Methods and structures adapt as industries and technologies change, while the fundamental principles stay.</span></div></div></section>
+
+<section class="s rv" id="how"><h2>How Apex works</h2>
+<div class="row" tabindex="0" aria-label="Six areas of the Apex approach"><div class="card" style="--c:#c75f2c"><b>Creation</b><span>Apex approaches creation as a process of development rather than a single moment of inspiration: discovery, concept development, creative development, testing and refinement, production, release or deployment, audience connection, and continued development.</span></div><div class="card" style="--c:#2f6fae"><b>Intellectual property</b><span>IP is treated as both creative expression and long-term company value: created intentionally, properly developed, protected, maintained, and expanded when appropriate. Not every IP needs to become a large franchise.</span></div><div class="card" style="--c:#7a4fb0"><b>Business</b><span>Businesses are built around capabilities, audiences, IP, technology, and opportunities, with enough independence to operate effectively while staying connected to the parent company.</span></div><div class="card" style="--c:#b08a2a"><b>People</b><span>Capabilities are built through people: creative and technical talent, business operators, producers, leaders, and specialists, with room to develop expertise.</span></div><div class="card" style="--c:#2f8f66"><b>Innovation</b><span>Experimentation is encouraged, as long as it leads to learning, capability, or meaningful improvement. Not every experiment becomes a permanent system.</span></div><div class="card" style="--c:#b43e5c"><b>Growth</b><span>Growth means the development of capability, quality, reach, ownership, and sustainable businesses, not simply an increase in size.</span></div></div></section>
+
+<section class="s rv" id="decide"><h2>How we decide</h2>
+<p>When major company decisions are made, Apex considers:</p>
+<ol class="list"><li>Does this support the company's long-term direction?</li><li>Does it strengthen creative or technical capability?</li><li>Does it protect or develop valuable IP and assets?</li><li>Does it create meaningful value for the relevant audience?</li><li>Does it strengthen the business or ecosystem?</li><li>Does it preserve the appropriate level of creative identity and specialization?</li><li>Can Apex execute it to the required standard?</li><li>Does the opportunity justify the resources and complexity required?</li></ol>
+<p>These questions provide a framework rather than an automatic formula.</p></section>
+
+<section class="s rv" id="divisions" style="border-bottom:0"><h2>Across the divisions</h2>
+<p>The philosophy applies across the Apex ecosystem while allowing each division to develop its own operating philosophy. The parent philosophy provides alignment. Division-level philosophies provide specialization.</p>
+<p>It is not a rigid operating manual. It does not prescribe one creative process, business model, technology stack, management style, visual identity, audience, or definition of success for every project.</p></section>
+
+<section class="close rv"><p>Apex does not simply seek to make more. It seeks to build better, build deeper, and build what can last.</p>
+<div class="btns"><a href="about.html">About Apex</a><a href="mandate.html">Our Mandate</a></div></section>
+</main>
+
+<footer><nav aria-label="Footer"><a href="index.html">Home</a><a href="coming-soon.html?p=Careers">Careers</a><a href="privacy.html">Terms &amp; Privacy</a></nav>
+<p>© 2026 Apex Universal Studios™. All rights reserved.</p></footer>
+
+<script>
+(function(){
+var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+function setMenu(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':''}
+btn.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);btn.focus()}});
+menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+document.querySelectorAll('h1,h2,.close p').forEach(function(el){
+var words=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',words.join(' '));el.innerHTML='';
+words.forEach(function(w,k){var o=document.createElement('span'),n=document.createElement('span');o.className='w';o.setAttribute('aria-hidden','true');n.textContent=w;n.style.setProperty('--d',Math.min(k,12)*55+'ms');o.appendChild(n);el.appendChild(o);el.appendChild(document.createTextNode(' '))})});
+var t=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});t.forEach(function(e){io.observe(e)})}
+else{t.forEach(function(e){e.classList.add('in')})}
+setTimeout(function(){document.getElementById('hero').classList.add('in')},120);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.className="js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apex Universal Studios™</title>
+<meta name="description" content="Apex Universal Studios™ is the parent company built to create, own, develop, operate, and expand a portfolio of entertainment, media, technology, intellectual property, and creative businesses.">
+<meta property="og:title" content="Apex Universal Studios™">
+<meta property="og:description" content="Building enduring entertainment businesses, original worlds, and valuable intellectual property.">
+<meta property="og:image" content="mandate-ip.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Cpath d='M32 12 12 52h9l11-24 11 24h9z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#0a0c10;--ink2:#14181f;--line:rgba(255,255,255,.16);--mute:rgba(255,255,255,.74);--head:64px;
+--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + env(safe-area-inset-top,0px))}
+body{background:var(--ink);color:#fff;font-family:var(--sans);line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:.6rem 1rem;z-index:3000}
+.skip:focus{left:8px}
+/* header + menu */
+header{position:fixed;inset:0 0 auto;z-index:2000;display:flex;justify-content:space-between;align-items:center;
+height:calc(var(--head) + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 1.25rem 0;background:rgba(10,12,16,.94);
+-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:1.1rem;letter-spacing:.02em}
+#menuBtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);cursor:pointer;
+display:grid;place-content:center;gap:5px}
+#menuBtn span{display:block;width:20px;height:2px;background:#fff;transition:transform .3s,opacity .3s}
+#menuBtn[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#menuBtn[aria-expanded=true] span:nth-child(2){opacity:0}
+#menuBtn[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:1900;background:var(--ink);overflow-y:auto;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s;
+padding:calc(var(--head) + env(safe-area-inset-top,0px) + 1rem) 1.25rem calc(2rem + env(safe-area-inset-bottom,0px))}
+#menu.open{visibility:visible;opacity:1}
+#menu details{border-bottom:1px solid var(--line)}
+#menu summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:1.3rem 0;font-size:1.2rem;font-weight:600}
+#menu summary::-webkit-details-marker{display:none}
+#menu summary::after{content:"+";font-size:1.5rem;transition:transform .3s}
+#menu details[open] summary::after{transform:rotate(45deg)}
+#menu details a{display:block;padding:.95rem 0 .95rem 1rem;color:var(--mute);border-left:2px solid transparent}
+#menu details a:hover,#menu details a:focus-visible{color:#fff;border-left-color:#fff}
+.follow{padding-top:1.5rem;color:var(--mute)}
+.follow div{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:.6rem}
+/* hero */
+.intro{padding:calc(var(--head) + env(safe-area-inset-top,0px) + 2.5rem) 1.25rem 2rem;max-width:980px}
+.intro h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.55rem,5.2vw,2.9rem);line-height:1.22}
+.carousel{position:relative}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;position:relative;min-height:min(66svh,560px);display:flex;align-items:flex-end;
+background:linear-gradient(160deg,var(--c) 0%,var(--ink2) 70%);border-top:1px solid var(--line)}
+.slide::before{content:"Image coming soon";position:absolute;top:1.25rem;right:1.25rem;font-size:.85rem;color:var(--mute);
+border:1px dashed var(--line);padding:.3rem .7rem;border-radius:4px}
+.slide div{padding:1.5rem 1.25rem 4.2rem;max-width:620px}
+.slide h2,.panel h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,6vw,3rem);line-height:1.1}
+.slide p{color:var(--mute);margin-top:.6rem}
+.rule{display:block;width:64px;height:3px;background:var(--c,#fff);margin:.9rem 0}
+.ctl{position:absolute;left:0;right:0;bottom:1.1rem;display:flex;align-items:center;gap:.75rem;padding:0 1.25rem}
+.bars{display:flex;gap:6px;flex:1}
+.bars i{flex:1;height:4px;background:rgba(255,255,255,.28);border-radius:2px}
+.bars i.on{background:#fff}
+.ctl button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(10,12,16,.55);color:#fff;font-size:1.1rem;cursor:pointer}
+/* mandate panels */
+.lead{padding:3.5rem 1.25rem 2rem;max-width:760px}
+.lead h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,6vw,3rem);margin-bottom:.8rem}
+.lead p,.panel p{color:var(--mute);font-size:1.05rem;max-width:62ch}
+.panel{position:relative;min-height:min(86svh,680px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink2)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,16,.94) 0%,rgba(10,12,16,.6) 42%,rgba(10,12,16,.1) 100%)}
+.panel div{position:relative;z-index:1;padding:2rem 1.25rem 2.5rem}
+.close{padding:5rem 1.25rem;text-align:center;border-top:1px solid var(--line)}
+.close p{font-family:var(--serif);font-size:clamp(1.6rem,5.5vw,2.8rem);line-height:1.25;max-width:20ch;margin:0 auto}
+/* contact + footer */
+.contact{padding:3.5rem 1.25rem;background:var(--ink2);border-top:1px solid var(--line)}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,5vw,2.4rem)}
+.contact p{color:var(--mute);margin:.6rem 0 1.4rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btns a{padding:.8rem 1.3rem;border:1px solid rgba(255,255,255,.4);border-radius:6px;font-weight:600}
+.btns a:hover{background:rgba(255,255,255,.12)}
+footer{padding:2.5rem 1.25rem calc(2.5rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--mute);font-size:.92rem}
+footer nav{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-bottom:1.2rem}
+@media(min-width:900px){.intro,.lead,.slide div,.panel div{padding-left:4rem;padding-right:4rem}.ctl,.contact,footer,.close{padding-left:4rem;padding-right:4rem}.contact{padding-top:4rem}}
+/* motion */
+.js .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.js .w>span{display:inline-block;transform:translateY(112%);transition:transform 1s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+.js .in .w>span{transform:none}
+.js .rule{width:0;transition:width .9s cubic-bezier(.2,.7,.2,1) .5s}
+.js .in .rule{width:64px}
+.js .slide p,.js .panel p,.js .rv p,.js .rv .btns{opacity:0;transform:translateY(14px);transition:opacity 1s ease .7s,transform 1s ease .7s}
+.js .slide.in p,.js .panel.in p,.js .rv.in p,.js .rv.in .btns{opacity:1;transform:none}
+.js .panel img{transition:opacity 1.8s ease,filter 2s ease,transform 2.8s cubic-bezier(.2,.7,.2,1)}
+.js .panel.b img{filter:brightness(.2);transform:scale(1.09)}
+.js .panel.f img{opacity:0;transform:scale(1.05)}
+.js .panel.in img{filter:none;opacity:1;transform:none}
+.slide{transition:filter .8s}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="brand" href="index.html">Apex Universal Studios™</a>
+<button id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</header>
+
+<nav id="menu" aria-label="Main menu">
+<details name="g"><summary>Company</summary>
+<a href="about.html">About Apex</a>
+<a href="mandate.html">Our Mandate</a>
+<a href="vision-mission.html">Vision &amp; Mission</a>
+<a href="philosophy.html">Company Philosophy</a></details>
+<details name="g"><summary>Divisions</summary>
+<a href="coming-soon.html?p=Apex%20Animation%20Studio%E2%84%A2">Apex Animation Studio™</a>
+<a href="coming-soon.html?p=Apex%20Pictures%E2%84%A2">Apex Pictures™</a>
+<a href="coming-soon.html?p=Apex%20Music%E2%84%A2">Apex Music™</a>
+<a href="coming-soon.html?p=Apex%20Labels%E2%84%A2">Apex Labels™</a>
+<a href="coming-soon.html?p=Apex%20Games%E2%84%A2">Apex Games™</a>
+<a href="coming-soon.html?p=Apex%20Software%E2%84%A2">Apex Software™</a></details>
+<details name="g"><summary>Resources</summary>
+<a href="coming-soon.html?p=Portfolio">Portfolio</a>
+<a href="coming-soon.html?p=Documentation">Documentation</a>
+<a href="coming-soon.html?p=Company%20Blog">Company Blog</a>
+<a href="coming-soon.html?p=Press%20Kit">Press Kit</a></details>
+<details name="g"><summary>Support</summary>
+<a href="contact.html">Contact Us</a>
+<a href="coming-soon.html?p=Careers">Careers</a>
+<a href="coming-soon.html?p=Newsletter">Newsletter</a>
+<a href="privacy.html">Terms &amp; Privacy</a></details>
+<div class="follow">Follow Apex<div>
+<a href="https://x.com/ApexUniversalSt" target="_blank" rel="noopener">X</a>
+<a href="https://www.instagram.com/apexuniversalstudios" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@apexuniversalstudios" target="_blank" rel="noopener">Threads</a>
+<a href="https://www.tiktok.com/@apexuniversalstudios" target="_blank" rel="noopener">TikTok</a></div></div>
+</nav>
+
+<main id="main">
+<section class="intro">
+<h1>Apex Universal Studios™ exists to build enduring entertainment businesses, original worlds, memorable characters, valuable intellectual property, and creative products that can grow across generations and mediums.</h1>
+</section>
+
+<section class="carousel" aria-roledescription="carousel" aria-label="Apex divisions">
+<div class="track" id="track" tabindex="0">
+<a class="slide" style="--c:#c75f2c" href="coming-soon.html?p=Apex%20Animation%20Studio%E2%84%A2"><div><h2>Apex Animation Studio™</h2><span class="rule"></span><p>Animated films, series, and shorts.</p></div></a>
+<a class="slide" style="--c:#2f6fae" href="coming-soon.html?p=Apex%20Pictures%E2%84%A2"><div><h2>Apex Pictures™</h2><span class="rule"></span><p>Comics, graphic novels, and publishing.</p></div></a>
+<a class="slide" style="--c:#7a4fb0" href="coming-soon.html?p=Apex%20Music%E2%84%A2"><div><h2>Apex Music™</h2><span class="rule"></span><p>Music creation, releases, and soundtracks.</p></div></a>
+<a class="slide" style="--c:#b08a2a" href="coming-soon.html?p=Apex%20Labels%E2%84%A2"><div><h2>Apex Labels™</h2><span class="rule"></span><p>Artist development and catalog management.</p></div></a>
+<a class="slide" style="--c:#2f8f66" href="coming-soon.html?p=Apex%20Games%E2%84%A2"><div><h2>Apex Games™</h2><span class="rule"></span><p>Games and interactive entertainment.</p></div></a>
+<a class="slide" style="--c:#b43e5c" href="coming-soon.html?p=Apex%20Software%E2%84%A2"><div><h2>Apex Software™</h2><span class="rule"></span><p>Software, digital products, and creative technology.</p></div></a>
+</div>
+<div class="ctl">
+<button id="prev" aria-label="Previous division">&#8249;</button>
+<div class="bars" id="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<button id="pp" aria-label="Pause slideshow">&#10074;&#10074;</button>
+<button id="next" aria-label="Next division">&#8250;</button>
+</div>
+</section>
+
+<section class="lead" id="mandate">
+<h2>Our Mandate</h2>
+<p>Apex is built for long-term creation, ownership, development, and expansion rather than short-term production alone.</p>
+</section>
+
+<section class="panel"><img src="mandate-entertainment.jpg" alt="Musicians and an engineer working at a recording studio mixing console" loading="lazy"><div>
+<h2>Entertainment</h2><span class="rule"></span><p>Apex is responsible for creating and developing entertainment across film, animation, music, games, publishing, interactive experiences, and future forms of entertainment.</p></div></section>
+<section class="panel"><img src="mandate-ip.jpg" alt="A traveler overlooking ancient ruins and waterfalls in a vast imagined world" loading="lazy"><div>
+<h2>Intellectual Property</h2><span class="rule"></span><p>Apex develops original characters, worlds, stories, brands, music, technologies, experiences, and other intellectual property with potential for continued use and expansion.</p></div></section>
+<section class="panel"><img src="mandate-businesses.jpg" alt="A creative team collaborating in a music production studio" loading="lazy"><div>
+<h2>Creative Businesses</h2><span class="rule"></span><p>Apex builds specialized divisions and businesses capable of turning creative capabilities and intellectual property into sustainable long-term enterprises.</p></div></section>
+<section class="panel"><img src="mandate-talent.jpg" alt="Two artists reviewing a storyboard sketch on a monitor" loading="lazy"><div>
+<h2>Talent &amp; Capabilities</h2><span class="rule"></span><p>Apex develops the people, creative disciplines, technical capabilities, production systems, and leadership required to sustain its businesses.</p></div></section>
+<section class="panel"><img src="mandate-technology.jpg" alt="A motion-capture performer and an animator working with an animated character on screen" loading="lazy"><div>
+<h2>Technology &amp; Innovation</h2><span class="rule"></span><p>Apex develops and adopts technology where it strengthens creation, production, distribution, interaction, business operations, or future opportunities.</p></div></section>
+<section class="panel"><img src="mandate-expansion.jpg" alt="An explorer standing beside a waterfall in an autumn forest" loading="lazy"><div>
+<h2>Expansion</h2><span class="rule"></span><p>Apex remains capable of entering new industries, mediums, markets, and business categories as opportunities and capabilities develop.</p></div></section>
+
+<section class="close"><p>The mandate is not simply to produce. It is to build.</p></section>
+
+<section class="contact" id="contact">
+<h2>Follow Apex</h2>
+<p>Reach us on our official channels.</p>
+<div class="btns">
+<a href="https://x.com/ApexUniversalSt" target="_blank" rel="noopener">X</a>
+<a href="https://www.instagram.com/apexuniversalstudios" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@apexuniversalstudios" target="_blank" rel="noopener">Threads</a>
+<a href="https://www.tiktok.com/@apexuniversalstudios" target="_blank" rel="noopener">TikTok</a>
+</div>
+</section>
+</main>
+
+<footer>
+<nav aria-label="Footer">
+<a href="about.html">About Apex</a>
+<a href="coming-soon.html?p=Apex%20Animation%20Studio%E2%84%A2">Divisions</a>
+<a href="coming-soon.html?p=Careers">Careers</a>
+<a href="privacy.html">Terms &amp; Privacy</a>
+</nav>
+<p>© 2026 Apex Universal Studios™. All rights reserved.</p>
+<p>Founded and led by <a href="https://faruqayomideojolowo.github.io/" target="_blank" rel="noopener" style="text-decoration:underline;color:#fff">Faruq Ayomide Ojolowo</a></p>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Apex Universal Studios™","description":"A diversified entertainment, media, and technology company built to create, develop, own, and expand original intellectual property.","sameAs":["https://x.com/ApexUniversalSt","https://www.instagram.com/apexuniversalstudios","https://www.threads.com/@apexuniversalstudios","https://www.tiktok.com/@apexuniversalstudios"]}</script>
+<script>
+(function(){
+var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+function setMenu(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':''}
+btn.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);btn.focus()}});
+menu.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+
+var t=document.getElementById('track'),n=t.children.length,bars=document.querySelectorAll('#bars i'),pp=document.getElementById('pp'),i=0,timer=null,paused=false;
+var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(k){i=(k+n)%n;t.scrollTo({left:i*t.clientWidth,behavior:still?'auto':'smooth'})}
+function mark(){bars.forEach(function(b,k){b.className=k===i?'on':''});[].forEach.call(t.children,function(s,k){s.classList.toggle('in',k===i)})}
+t.addEventListener('scroll',function(){var k=Math.round(t.scrollLeft/t.clientWidth);if(k!==i){i=k;mark()}},{passive:true});
+document.getElementById('prev').addEventListener('click',function(){go(i-1)});
+document.getElementById('next').addEventListener('click',function(){go(i+1)});
+function stop(){clearInterval(timer);timer=null}
+function start(){if(!paused&&!still&&!timer)timer=setInterval(function(){go(i+1)},5500)}
+pp.addEventListener('click',function(){paused=!paused;pp.innerHTML=paused?'&#9654;':'&#10074;&#10074;';pp.setAttribute('aria-label',paused?'Play slideshow':'Pause slideshow');paused?stop():start()});
+['pointerdown','mouseenter','focusin'].forEach(function(ev){t.addEventListener(ev,stop)});
+['pointerup','mouseleave','focusout'].forEach(function(ev){t.addEventListener(ev,start)});
+window.addEventListener('resize',function(){t.scrollTo({left:i*t.clientWidth})});
+
+document.querySelectorAll('.intro h1,.slide h2,.panel h2,.lead h2,.contact h2,.close p').forEach(function(el){
+var words=el.textContent.trim().split(/\s+/);el.setAttribute('aria-label',words.join(' '));el.innerHTML='';
+words.forEach(function(w,k){var o=document.createElement('span'),n=document.createElement('span');o.className='w';o.setAttribute('aria-hidden','true');
+n.textContent=w;n.style.setProperty('--d',Math.min(k,16)*55+'ms');o.appendChild(n);el.appendChild(o);el.appendChild(document.createTextNode(' '))})});
+document.querySelectorAll('.lead,.contact,.close').forEach(function(e){e.classList.add('rv')});
+var ps=document.querySelectorAll('.panel');ps.forEach(function(p,k){p.classList.add(k%2?'f':'b')});
+var targets=document.querySelectorAll('.panel,.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.28});targets.forEach(function(e){io.observe(e)})}
+else{targets.forEach(function(e){e.classList.add('in')})}
+setTimeout(function(){document.querySelector('.intro').classList.add('in');mark()},120);
+start();
+
+})();
+</script>
+</body>
+</html>
